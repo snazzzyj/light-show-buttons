@@ -13,7 +13,7 @@ input.onButtonPressed(Button.A, function () {
 input.onSound(DetectedSound.Loud, function () {
     strip = neopixel.create(DigitalPin.P0, 30, NeoPixelMode.RGB)
     strip.showRainbow(1, 360)
-    sound_to_colour = Math.map(input.soundLevel(), 0, 187, 0, 280)
+    sound_to_colour = Math.map(input.soundLevel(), 0, 30, 0, 255)
     strip.showColor(neopixel.hsl(sound_to_colour, 255, 20))
 })
 input.onButtonPressed(Button.B, function () {
